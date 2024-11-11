@@ -1,0 +1,35 @@
+def caln_01():
+    while True:
+        try:
+            a = float(input("Enter the firsts num: "))
+            break
+        except ValueError:
+            print("This is not the correct number and try it again.")
+
+    while True:
+        activity = input("given activity (+, -, *, /): ")
+        if activity in ['+', '-', '*', '/']:
+            break
+        else:
+            print("This is not the exact num.")
+
+    while True:
+        try:
+            b = float(input("Try with second num: "))
+            break
+        except ValueError:
+            print("This is not the right one. try it again")
+
+    if activity == '+':
+        print(f"Result: {a + b}")
+    elif activity == '-':
+        print(f"Result: {a - b}")
+    elif activity == '*':
+        print(f"Result: {a * b}")
+    elif activity == '/':
+        if b != 0:
+            print(f"Result: {a / b}")
+        else:
+            print("Division by zero is allowed.")
+
+caln_01()
